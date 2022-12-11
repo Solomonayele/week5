@@ -39,17 +39,22 @@ let rates = {
 }
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
-  // "CHf": 1.1787,
+  rates["CHf"]= 1.1787,
+      console.log(rates)
 
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate
 //      the equivalent value in Australian Dollars (AUD)
 
-// eud = Euros  * 1.49
+let rate = rates["AUD"]
+newRates = rate + 100
+console.log(newRates.toFixed(2))
 
 // TODO write code to identify the currency symbol that has the highest exchange rate compared to Euros.
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
 
-e
+let highestRate = Object.values(rates);
+let max = Math.max(...highestRate);
+console.log(`max value: ${max}`);
 
 /* c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
  */
@@ -62,9 +67,45 @@ let cats_and_owners = [
 ]
 
 // TODO print Gary Oldman's cat's name
+let highestRate = Object.values(rates);
+let max = Math.max(...highestRate);
+console.log(`max value: ${max}`);
+
+cats_and_owners[4] = {name: "Taylor Swift's", cat: "Meredith"}
+console.log(cats_and_owners)
 // TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
 //   Each line should have a message like "Snoop Dogg's cat is called Miles Davis"
+
+
+ cats_and_owners.forEach(function (cat_s,index) {
+let get_cat_name = cats_and_owners.name
+console.log(index, get_cat_name)
+ })
+
+
+
+ for (let x=0; x<cats_and_owners.length; x++) {
+
+let get_name_catsName = cats_and_owners[x]
+
+let names = cats_and_owners.name
+
+console.log(x, names)
+ }
+
+
+
+
+for (let catOwners_s in cats_and_owners) {
+
+let catNameOwners = cats_and_owners[catOwners_s]
+
+console
+.log(`${catOwners_s}cat is called ${catNameOwners}`)
+
+
+ }
 
 
 
